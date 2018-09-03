@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2016",
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "lib",
+    "baseUrl": ".",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "node"
+    ],
+    "lib": [
+      "es2015"
+    ]
+  },
+  "include": [
+    "./okto.ts", "./cli.ts"
+  ]
+}

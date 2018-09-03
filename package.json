@@ -1,0 +1,19 @@
+{
+  "name": "yart",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nyc": "^13.0.1",
+    "prettier": "^1.14.2",
+    "tap-dot": "^2.0.0",
+    "tape": "^4.9.1",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  }
+}
