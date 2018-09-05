@@ -1,4 +1,7 @@
-import { Adapters } from './adapter';
+import { FetchAdapter } from './fetch-adapter';
+
+type Adapters = FetchAdapter;
+
 enum INTERCEPTOR {
   SUCCESS,
   FAIL

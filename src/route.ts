@@ -1,10 +1,10 @@
 export interface Route {
   readonly _path: string[];
-  readonly path: string;
+  //readonly path: string;
 }
 export class YartRoute implements Route {
   _path: string[] = [];
-  get path() {
+  path() {
     return '/' + this._path.join('/');
   }
   public append(part: string): this {

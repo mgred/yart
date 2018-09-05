@@ -1,7 +1,10 @@
 import { Config } from './config';
+import applyMixins from './mixin';
+import { YartParams } from './params';
 import { YartRequest } from './request';
+import { YartRoute } from './route';
 
-class Yart {
+export class Yart {
   private request;
   constructor(private config: Config) {
     this.boot();
@@ -9,13 +12,14 @@ class Yart {
   }
 
   initialize() {
+    applyMixins(YartRequest, [YartParams, YartRoute]);
     this.request = new YartRequest(this.config);
   }
 
   boot() {}
 
-  delete(selectot: string, body: any = null) {
-    return this.request.config({ method: 'DELETE', body });
+  delete(selector: string, body: any = null) {
+    return this.request.config({ method: 'DELETE', body }).append(selector);
   }
 
   update(selector: string, body: any) {
@@ -23,7 +27,7 @@ class Yart {
   }
 
   find(selector: string) {
-    return this.request.select(selector);
+    return this.select(selector);
   }
 
   select(selector: string) {

@@ -1,6 +1,7 @@
-import * as test from 'tape';
-import { YartRoute } from './route';
 import { stub } from 'sinon';
+import * as test from 'tape';
+
+import { YartRoute } from './route';
 
 test('YartRoute', t => {
   t.plan(1);
@@ -34,7 +35,7 @@ test('prepend', t => {
 test('path', t => {
   const route = new YartRoute();
   const join = stub(route._path, 'join').callThrough();
-  const path = route.append('test').path;
+  const path = route.append('test').path();
   t.plan(2);
   t.ok(join.calledOnceWithExactly('/'));
   t.equal(path, '/test');

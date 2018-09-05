@@ -1,7 +1,8 @@
-import * as test from 'tape';
-import { YartRequest } from './request';
-import { Config } from './config';
 import { spy } from 'sinon';
+import * as test from 'tape';
+
+import { Config } from './config';
+import { YartRequest } from './request';
 
 test('YartRequest', t => {
   const config: any = {

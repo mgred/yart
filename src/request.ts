@@ -1,11 +1,11 @@
-import { YartRoute } from './route';
-import { YartParams } from './params';
 import { Config, RequestMethod } from './config';
+import { YartParams } from './params';
+import { YartRoute } from './route';
 
 export class YartRequest implements YartRoute, YartParams {
-  params: string;
+  params: () => string;
   _params = {};
-  path: string;
+  path: () => string;
   _path = [''];
   baseUrl: string;
   prefix: string;

@@ -6,7 +6,7 @@ export interface Params {
 
 export class YartParams implements Params {
   _params = {};
-  get params() {
+  params() {
     return Object.keys(this._params)
       .map(key => {
         const value = encodeURIComponent(this._params[key]);
